@@ -92,6 +92,7 @@ Usage Example
 =============
 
 .. code-block:: python
+
     import adafruit_s35710
 
     print("hello s35710")
