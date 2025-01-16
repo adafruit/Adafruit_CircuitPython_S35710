@@ -2,7 +2,7 @@ Introduction
 ============
 
 
-.. image:: https://readthedocs.org/projects/adafruit-circuitpython-s35710/badge/?version=latest
+.. image:: https://readthedocs.org/projects/adafruit-circuitpython-s-35710/badge/?version=latest
     :target: https://docs.circuitpython.org/projects/s35710/en/latest/
     :alt: Documentation Status
 
