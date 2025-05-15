@@ -29,7 +29,8 @@ import adafruit_bus_device.i2c_device as i2cdevice
 from micropython import const
 
 try:
-    import typing  # pylint: disable=unused-import
+    import typing
+
     from busio import I2C
 except ImportError:
     pass
@@ -76,15 +77,11 @@ class Adafruit_S35710:
         :type value: int
         """
         try:
-            buffer = bytearray(
-                [0x81, (value >> 16) & 0xFF, (value >> 8) & 0xFF, value & 0xFF]
-            )
+            buffer = bytearray([0x81, (value >> 16) & 0xFF, (value >> 8) & 0xFF, value & 0xFF])
             with self.i2c_device as device:
                 device.write(buffer)
         except Exception as error:
-            raise ValueError(
-                "Failed to write wake-up time register: ", error
-            ) from error
+            raise ValueError("Failed to write wake-up time register: ", error) from error
 
     @property
     def clock(self):
